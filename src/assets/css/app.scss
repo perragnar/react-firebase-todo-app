@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    background-color: #222;
+    margin: 0;
+    padding: 20px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+    padding: 5px 10px;
+    line-height: 1;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-right: 3px;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    line-height: 1;
+    background-color: #aaa;
+
+    h1 {
+        font-size: 1.2em;
+
+        sup {
+            font-size: 0.5em;
+        }
+    }
+}
+
+.task-form {
+    padding: 20px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+
+    .task-form__title {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+        box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 2px;
+    }
+
+    .task-form__buttons {
+        display: flex;
+        margin-left: 10px;
+    }
+}
+
+.tasks {
+    padding: 20px;
+
+    .tasks__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+
+            &:not(:last-child) {
+                border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+            }
+
+            .task-check {
+                margin-right: 10px;
+            }
+
+            .task-title {
+                font-weight: bold;
+                flex: 1;
+
+                &.task-title--ticked {
+                    opacity: 0.5;
+                    text-decoration: line-through;
+                }
+            }
+
+            .task-buttons {
+                display: flex;
+
+                .btn {
+                    &:not(:last-child) {
+                        margin-right: 3px;
+                    }
+                }
+
+                .btn--delete {
+                    color: #860000;
+                }
+            }
+        }
+    }
+}
