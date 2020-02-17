@@ -17,7 +17,7 @@ npm install
 
 ### Step 2: Configure Google Firebase connection
 
-Rename **.env-template** to .env and fill in your Firebase settings.
+Rename **.env-template** to **.env** and fill in your Firebase settings.
 
 ### Step 3: Start the application
 
